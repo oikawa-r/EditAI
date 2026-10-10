@@ -1,0 +1,28 @@
+{
+  "source_path": "C:/Users/ryo30/nopasodaigaku/EditAI/temp/fda65f38-3405-4a25-ba13-4fe848c35dfe/source.mkv",
+  "options": {
+    "enabled": false,
+    "vad_threshold": 0.5,
+    "min_silence_ms": 500,
+    "padding_ms": 150
+  },
+  "media": {
+    "duration": 148.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true
+  },
+  "enabled": false,
+  "original_duration": 148.0,
+  "cut_duration": 148.0,
+  "removed_duration": 0.0,
+  "kept_ranges": [
+    {
+      "source_start": 0.0,
+      "source_end": 148.0,
+      "output_start": 0.0,
+      "output_end": 148.0
+    }
+  ]
+}

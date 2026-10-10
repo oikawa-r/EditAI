@@ -1,0 +1,64 @@
+{
+  "model": "small",
+  "language": "ja",
+  "device": "cpu",
+  "duration": 43.133,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 9.0,
+      "text": "そして一旦無音カットができたところで",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 9.0,
+      "end": 16.0,
+      "text": "細かいシステムまで先に無音カットの部分で作るかそれとも全体を先に作っちゃう",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 16.0,
+      "end": 23.0,
+      "text": "大きな方となる部分を作り切っちゃうかで質問をして大きな方を先に作った方が",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 23.0,
+      "end": 27.0,
+      "text": "一旦アプリができると",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0005",
+      "index": 4,
+      "start": 27.0,
+      "end": 33.0,
+      "text": "そしてデータ構造も確定してからUIを作れる。",
+      "confidence": 0.729
+    },
+    {
+      "id": "seg_0006",
+      "index": 5,
+      "start": 33.0,
+      "end": 40.0,
+      "text": "システム的に、さっきに大きな方を作った方が頭といじりやすいという点で、",
+      "confidence": 0.729
+    },
+    {
+      "id": "seg_0007",
+      "index": 6,
+      "start": 40.0,
+      "end": 43.0,
+      "text": "一旦先に大きな方を作っていきます。",
+      "confidence": 0.729
+    }
+  ]
+}

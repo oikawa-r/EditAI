@@ -1,0 +1,32 @@
+{
+  "model": "small",
+  "language": "ja",
+  "device": "cpu",
+  "duration": 21.802,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 9.6,
+      "text": "こんにちは 今回は音声の映画どうなるか調べたいと思います",
+      "confidence": 0.804
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 9.6,
+      "end": 18.76,
+      "text": "ということでこれで音声がどんな感じに途切れているのかを今検証しているために色々なしゃべり方で喋っています",
+      "confidence": 0.804
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 18.76,
+      "end": 21.802,
+      "text": "今はとにかく早く喋っています",
+      "confidence": 0.804
+    }
+  ]
+}

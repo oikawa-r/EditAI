@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EditAI - 自動動画編集</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen" class="start-screen">
+    <header class="start-header">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true">▶</span>
+        <span class="brand-name">EditAI</span>
+      </div>
+      <button type="button" id="settings-btn" class="btn btn-secondary">設定</button>
+    </header>
+
+    <main class="start-main">
+      <div class="start-hero">
+        <button type="button" id="start-create" class="start-create">＋ 新しいプロジェクトを作成</button>
+      </div>
+
+      <section class="start-recent" aria-labelledby="recent-heading">
+        <h2 id="recent-heading" class="start-heading">最近のプロジェクト</h2>
+        <ul id="project-cards" class="project-cards"></ul>
+      </section>
+    </main>
+  </div>
+
+  <div id="editor" hidden>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-logo" aria-hidden="true">▶</span>
+      <span class="brand-name">EditAI</span>
+    </div>
+
+    <div class="project-info">
+      <span id="file-name" class="file-name">動画をインポートしてください</span>
+      <span id="cut-info" class="muted">バックエンドに接続しています…</span>
+    </div>
+
+    <div class="header-actions">
+      <button type="button" id="cancel-btn" class="btn btn-secondary" hidden>解析を中断</button>
+      <button type="button" id="export-btn" class="btn btn-primary" disabled>書き出し</button>
+    </div>
+  </header>
+
+  <div class="editor-layout" id="editor-layout">
+    <section class="editor-pane pane-media" aria-labelledby="pane-media-title">
+      <h2 id="pane-media-title">素材</h2>
+      <label class="media-drop" id="import-label" for="file-input">
+        <span class="media-drop-title">追加する</span>
+        <span class="media-drop-hint">動画、写真、音声をここに置けます</span>
+      </label>
+      <ul id="media-list" class="media-list"></ul>
+    </section>
+    <div class="pane-resizer" data-axis="x" data-index="0" role="separator" aria-orientation="vertical" aria-label="素材とツールの境目"></div>
+    <section class="editor-pane pane-tools" aria-labelledby="pane-tools-title">
+      <h2 id="pane-tools-title">ツール</h2>
+      <div class="tool-groups">
+        <section class="tool-group">
+          <h3 class="tool-subtitle">カット</h3>
+          <div class="tool-group-body">
+            <div class="tool-tabs" role="tablist" aria-label="カット">
+              <button type="button" class="tool-tab is-active" id="tool-tab-cut" role="tab" aria-selected="true" aria-controls="tool-panel-cut">カット</button>
+              <button type="button" class="tool-tab" id="tool-tab-cut-delete" role="tab" aria-selected="false" aria-controls="tool-panel-cut-delete">カット一括削除選択</button>
+            </div>
+            <div class="tool-panel" id="tool-panel-cut" role="tabpanel" aria-labelledby="tool-tab-cut">
+              <button type="button" class="btn btn-primary tool-action" id="cut-silence-btn">無音部分に切り込みを入れる</button>
+            </div>
+            <div class="tool-panel" id="tool-panel-cut-delete" role="tabpanel" aria-labelledby="tool-tab-cut-delete" hidden>
+              <button type="button" class="btn btn-primary tool-action" id="cut-gap-delete-btn">タイムライン選択範囲のブロックの間を一括削除する</button>
+            </div>
+          </div>
+        </section>
+        <section class="tool-group">
+          <h3 class="tool-subtitle">テロップ</h3>
+          <div class="tool-group-body">
+            <div class="tool-tabs" role="tablist" aria-label="テロップ">
+              <div class="tool-tab-row">
+                <button type="button" class="tool-tab is-active" id="tool-tab-telop-generate" role="tab" aria-selected="true" aria-controls="tool-panel-telop-generate">テロップ生成</button>
+                <button type="button" class="tool-mark" id="tool-tab-telop-settings" role="tab" aria-selected="false" aria-controls="tool-panel-telop-settings" aria-label="設定" title="設定">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.63-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54c-.58.22-1.13.53-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.13.22.4.31.6.22l2.39-.96c.5.41 1.05.72 1.63.94l.36 2.54c.05.24.26.42.5.42h3.84c.24 0 .45-.18.5-.42l.36-2.54c.58-.22 1.13-.53 1.63-.94l2.39.96c.22.09.47 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+                  </svg>
+                </button>
+              </div>
+              <button type="button" class="tool-tab" id="tool-tab-telop-edit" role="tab" aria-selected="false" aria-controls="tool-panel-telop-edit">テロップ編集</button>
+            </div>
+            <div class="tool-panel" id="tool-panel-telop-generate" role="tabpanel" aria-labelledby="tool-tab-telop-generate">
+              <button type="button" class="btn btn-primary tool-action" id="telop-generate-btn">テロップを生成</button>
+            </div>
+            <div class="tool-panel" id="tool-panel-telop-settings" role="tabpanel" aria-labelledby="tool-tab-telop-settings" hidden>
+              <label class="telop-limit" for="telop-max-chars">何文字以内で区切る
+                <input id="telop-max-chars" type="number" min="1" max="200" value="20">
+              </label>
+              <button type="button" class="btn btn-primary tool-action" id="telop-settings-btn">この文字数で区切る</button>
+            </div>
+            <div class="tool-panel" id="tool-panel-telop-edit" role="tabpanel" aria-labelledby="tool-tab-telop-edit" hidden>
+              <button type="button" class="btn btn-primary tool-action" id="telop-style-btn">テロップのフォントや大きさ、色を簡単に変えられる画面を開く</button>
+              <ul class="telop-blocks" id="telop-blocks"></ul>
+            </div>
+          </div>
+        </section>
+        <section class="tool-group" id="property-editor" hidden>
+          <h3 class="tool-subtitle">プロパティ編集</h3>
+          <div class="property-toggles">
+            <button type="button" class="btn btn-secondary btn-sm property-toggle" id="prop-flip-h" aria-pressed="false">水平反転</button>
+            <button type="button" class="btn btn-secondary btn-sm property-toggle" id="prop-flip-v" aria-pressed="false">垂直反転</button>
+          </div>
+          <div class="property-fields">
+            <label class="property-field" for="prop-scale">スケール（%）
+              <input id="prop-scale" data-prop="scale" type="number" min="1" max="400" step="1" value="100">
+            </label>
+            <label class="property-field" for="prop-speed">スピード
+              <input id="prop-speed" data-prop="speed" type="number" min="0.1" max="4" step="0.1" value="1">
+            </label>
+            <label class="property-field" for="prop-width">幅（px）
+              <input id="prop-width" data-prop="width" type="number" min="1" step="1" value="1920">
+            </label>
+            <label class="property-field" for="prop-height">高さ（px）
+              <input id="prop-height" data-prop="height" type="number" min="1" step="1" value="1080">
+            </label>
+            <label class="property-field" for="prop-x">X座標
+              <input id="prop-x" data-prop="x" type="number" step="1" value="0">
+            </label>
+            <label class="property-field" for="prop-y">Y座標
+              <input id="prop-y" data-prop="y" type="number" step="1" value="0">
+            </label>
+            <label class="property-field" for="prop-rotation">回転角度（度）
+              <input id="prop-rotation" data-prop="rotation" type="number" step="1" value="0">
+            </label>
+          </div>
+          <div class="property-chroma">
+            <label class="property-check" for="prop-chroma">
+              <input id="prop-chroma" type="checkbox">
+              クロマキー
+            </label>
+            <input id="prop-chroma-color" type="color" value="#00ff00" aria-label="クロマキーの色">
+          </div>
+          <div id="property-video" hidden>
+            <h4 class="tool-subtitle">動画</h4>
+            <label class="property-field" for="prop-volume">音量
+              <input id="prop-volume" data-prop="volume" type="range" min="0" max="100" step="1" value="100">
+            </label>
+            <div class="property-fields">
+              <label class="property-field" for="prop-fade-in">フェードイン（秒）
+                <input id="prop-fade-in" data-prop="fadeIn" type="number" min="0" step="0.1" value="0">
+              </label>
+              <label class="property-field" for="prop-fade-out">フェードアウト（秒）
+                <input id="prop-fade-out" data-prop="fadeOut" type="number" min="0" step="0.1" value="0">
+              </label>
+              <label class="property-field" for="prop-pitch">ピッチ（半音）
+                <input id="prop-pitch" data-prop="pitch" type="number" min="-12" max="12" step="1" value="0">
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="pane-resizer" data-axis="x" data-index="1" role="separator" aria-orientation="vertical" aria-label="ツールとプレビューの境目"></div>
+    <section class="editor-pane pane-preview" aria-labelledby="pane-preview-title">
+      <h2 id="pane-preview-title">プレビュー</h2>
+      <div class="preview-stage">
+        <div class="preview-canvas" id="preview-canvas">
+          <div class="preview-transform" id="preview-transform">
+            <video id="preview-monitor" class="preview-monitor" playsinline preload="auto"></video>
+          </div>
+          <div class="preview-object" id="preview-object" hidden>
+            <img id="preview-image" class="preview-image" alt="">
+            <div id="preview-telop" class="preview-telop" hidden></div>
+            <div class="preview-box" id="preview-box">
+              <span class="preview-rotate-stem"></span>
+              <span class="preview-handle" data-handle="nw"></span>
+              <span class="preview-handle" data-handle="ne"></span>
+              <span class="preview-handle" data-handle="sw"></span>
+              <span class="preview-handle" data-handle="se"></span>
+              <span class="preview-handle preview-handle-rotate" data-handle="rotate" title="回転"></span>
+            </div>
+          </div>
+          <div class="preview-guide preview-guide-x" id="preview-guide-x" hidden></div>
+          <div class="preview-guide preview-guide-y" id="preview-guide-y" hidden></div>
+        </div>
+        <div class="analysis-overlay" id="analysis-overlay" hidden>
+          <span id="analysis-label">解析中…</span>
+          <progress id="analysis-progress" max="100" value="0"></progress>
+        </div>
+      </div>
+      <div class="preview-controls">
+        <div class="preview-transport">
+          <button type="button" class="btn btn-secondary btn-sm" id="preview-frame-back">コマ戻し</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="preview-play">再生</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="preview-frame-forward">コマ送り</button>
+        </div>
+        <input id="preview-seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="プレビューの再生位置">
+        <span id="preview-time" class="preview-time">00:00:00 / 00:00:00</span>
+        <label class="preview-aspect" for="preview-aspect">アスペクト比
+          <select id="preview-aspect">
+            <option value="16:9">16:9（横型）</option>
+            <option value="9:16">9:16（縦型）</option>
+            <option value="4:3">4:3</option>
+            <option value="3:4">3:4</option>
+            <option value="1:1">1:1</option>
+            <option value="custom">カスタム</option>
+          </select>
+        </label>
+        <div class="preview-custom" id="preview-custom" hidden>
+          <label for="preview-width">幅
+            <input id="preview-width" type="number" min="16" max="7680" step="2" value="1920">
+          </label>
+          <label for="preview-height">高さ
+            <input id="preview-height" type="number" min="16" max="7680" step="2" value="1080">
+          </label>
+        </div>
+        <div class="preview-utils">
+          <button type="button" class="preview-icon" id="preview-mute" aria-pressed="false" aria-label="ミュート" title="ミュート">
+            <svg class="icon-sound" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm11.5 3a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 15.5 12zM17 6.2v1.7a5.5 5.5 0 0 1 0 8.2v1.7a7.2 7.2 0 0 0 0-11.6z"/></svg>
+            <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm13.2 3 2.3-2.3-1.4-1.4L15.8 10.6 13.5 8.3l-1.4 1.4 2.3 2.3-2.3 2.3 1.4 1.4 2.3-2.3 2.3 2.3 1.4-1.4-2.3-2.3z"/></svg>
+          </button>
+          <button type="button" class="preview-icon" id="preview-shot" aria-label="スクリーンショット" title="スクリーンショット">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 4.5 10.2 6h3.6L15 4.5h3.2A1.8 1.8 0 0 1 20 6.3v11.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 17.7V6.3A1.8 1.8 0 0 1 5.8 4.5H9zM12 16.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8z"/></svg>
+          </button>
+          <button type="button" class="preview-icon" id="preview-full" aria-pressed="false" aria-label="全画面" title="全画面">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M5 5h5v2H7v3H5V5zm9 0h5v5h-2V7h-3V5zM5 14h2v3h3v2H5v-5zm12 3v-3h2v5h-5v-2h3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="pane-resizer pane-resizer-y" data-axis="y" role="separator" aria-orientation="horizontal" aria-label="上のエリアとタイムラインの境目"></div>
+    <section class="editor-pane editor-timeline" aria-labelledby="pane-timeline-title">
+      <div class="tl-head">
+        <div class="tl-title-row">
+          <h2 id="pane-timeline-title">タイムライン</h2>
+          <div class="tl-toolbar">
+            <button type="button" id="split-btn" class="btn btn-secondary btn-sm" disabled>分割</button>
+            <button type="button" id="delete-btn" class="btn btn-secondary btn-sm" disabled>削除</button>
+            <button type="button" id="undo-btn" class="btn btn-secondary btn-sm" disabled>元に戻す</button>
+            <button type="button" id="redo-btn" class="btn btn-secondary btn-sm" disabled>やり直す</button>
+            <label class="tl-zoom" for="tl-zoom">ズーム
+              <input id="tl-zoom" type="range" min="0" max="100" step="1" value="56" aria-label="タイムラインのズーム">
+            </label>
+          </div>
+        </div>
+        <p class="tl-hint">目盛りをドラッグすると再生位置が動きます。クリップは近くの端と再生位置に吸着します。分割は S、削除は Delete、元に戻すは Ctrl+Z、やり直すは Ctrl+Shift+Z です。ズームはスライダー、またはトラック上で Ctrl + ホイールです。</p>
+      </div>
+      <div class="seq" id="seq">
+        <div class="seq-corner"></div>
+        <div class="seq-ruler-view" id="seq-ruler-view">
+          <div class="seq-ruler" id="seq-ruler"></div>
+        </div>
+        <div class="seq-headers" id="seq-headers"></div>
+        <div class="seq-lanes-view" id="seq-lanes-view">
+          <div class="seq-lanes" id="seq-lanes"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </div>
+
+  <input type="file" id="file-input" accept="video/*,image/*,audio/*,.mp4,.mov,.mkv,.avi,.webm,.mp3,.wav,.m4a,.aac,.png,.jpg,.jpeg,.gif,.webp" multiple hidden>
+
+  <dialog id="cut-compare-dialog" class="dialog cut-compare-dialog">
+    <div class="cut-compare-title">
+      <h2>カット一括削除選択</h2>
+      <p id="cut-compare-name" class="muted small"></p>
+    </div>
+    <div class="cut-compare">
+      <div class="cut-compare-left">
+        <section class="cut-compare-row" aria-label="自動削除版">
+          <div class="cut-compare-row-main">
+            <h3 class="cut-compare-label">自動削除版</h3>
+            <div class="cut-compare-scroll">
+              <div class="cut-compare-lane" id="cut-lane-packed" data-kind="packed">
+                <div class="cut-compare-track" id="cut-track-packed"></div>
+                <div class="cut-playhead" id="cut-playhead-packed"></div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="cut-apply-packed">選択して適用</button>
+        </section>
+        <section class="cut-compare-row" aria-label="スプリット版">
+          <div class="cut-compare-row-main">
+            <div class="cut-compare-label-row">
+              <h3 class="cut-compare-label">スプリット版</h3>
+              <button type="button" class="btn btn-secondary btn-sm" id="cut-split-btn" disabled>分割</button>
+            </div>
+            <div class="cut-compare-scroll">
+              <div class="cut-compare-lane" id="cut-lane-split" data-kind="split">
+                <div class="cut-compare-track" id="cut-track-split"></div>
+                <div class="cut-playhead" id="cut-playhead-split"></div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="cut-apply-split">選択して適用</button>
+        </section>
+      </div>
+      <section class="cut-compare-right" aria-label="プレビュー">
+        <h3 class="cut-compare-label">プレビュー</h3>
+        <video id="cut-compare-video" class="cut-compare-video" controls playsinline preload="metadata"></video>
+      </section>
+    </div>
+    <form method="dialog" class="dialog-actions">
+      <button class="btn btn-secondary" type="submit">閉じる</button>
+    </form>
+  </dialog>
+
+  <dialog id="telop-gen-dialog" class="dialog telop-gen-dialog">
+    <div class="cut-compare-title">
+      <h2>テロップ生成</h2>
+      <p id="telop-gen-name" class="muted small"></p>
+    </div>
+    <div class="telop-gen">
+      <div class="telop-gen-left">
+        <section class="telop-gen-list-wrap" aria-label="テロップのリスト">
+          <h3 class="cut-compare-label">テロップ</h3>
+          <div class="telop-gen-list" id="telop-gen-list"></div>
+        </section>
+        <section class="telop-gen-time-wrap" aria-label="確認用タイムライン">
+          <h3 class="cut-compare-label">タイムライン</h3>
+          <div class="cut-compare-scroll">
+            <div class="cut-compare-lane" id="telop-gen-lane">
+              <div class="cut-compare-track" id="telop-gen-track"></div>
+              <div class="cut-playhead" id="telop-gen-playhead"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="telop-gen-right" aria-label="プレビュー">
+        <h3 class="cut-compare-label">プレビュー</h3>
+        <div class="telop-gen-stage">
+          <video id="telop-gen-video" class="cut-compare-video" controls playsinline preload="metadata"></video>
+          <p id="telop-gen-caption" class="telop-gen-caption"></p>
+        </div>
+      </section>
+    </div>
+    <div class="dialog-actions telop-gen-actions">
+      <button type="button" class="btn btn-primary" id="telop-gen-apply">決定して適用</button>
+      <form method="dialog">
+        <button class="btn btn-secondary" type="submit">閉じる</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="telop-edit-dialog" class="dialog telop-gen-dialog">
+    <div class="cut-compare-title">
+      <h2>テロップ編集</h2>
+      <p id="telop-edit-name" class="muted small"></p>
+    </div>
+    <div class="telop-gen">
+      <div class="telop-gen-left">
+        <section class="telop-gen-list-wrap" aria-label="テロップのリスト">
+          <div class="telop-edit-head">
+            <h3 class="cut-compare-label">テロップ</h3>
+            <div class="telop-edit-save">
+              <input id="telop-edit-preset-name" type="text" placeholder="プリセット名" aria-label="プリセット名">
+              <button type="button" class="btn btn-secondary btn-sm" id="telop-edit-save">この見た目を保存</button>
+            </div>
+          </div>
+          <div class="telop-gen-list" id="telop-edit-list"></div>
+        </section>
+        <section class="telop-gen-time-wrap" aria-label="確認用タイムライン">
+          <h3 class="cut-compare-label">タイムライン</h3>
+          <div class="cut-compare-scroll">
+            <div class="cut-compare-lane" id="telop-edit-lane">
+              <div class="cut-compare-track" id="telop-edit-track"></div>
+              <div class="cut-playhead" id="telop-edit-playhead"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="telop-gen-right" aria-label="プレビュー">
+        <h3 class="cut-compare-label">プレビュー</h3>
+        <div class="telop-gen-stage" id="telop-edit-stage">
+          <video id="telop-edit-video" class="cut-compare-video" controls playsinline preload="metadata"></video>
+          <div class="telop-edit-frame" id="telop-edit-frame" hidden>
+            <p id="telop-edit-caption" class="telop-edit-caption"></p>
+            <div class="preview-box" id="telop-edit-box">
+              <span class="preview-handle" data-handle="nw"></span>
+              <span class="preview-handle" data-handle="ne"></span>
+              <span class="preview-handle" data-handle="sw"></span>
+              <span class="preview-handle" data-handle="se"></span>
+            </div>
+          </div>
+          <div class="preview-guide preview-guide-x" id="telop-edit-guide-x" hidden></div>
+          <div class="preview-guide preview-guide-y" id="telop-edit-guide-y" hidden></div>
+        </div>
+      </section>
+    </div>
+    <div class="dialog-actions telop-gen-actions">
+      <button type="button" class="btn btn-primary" id="telop-edit-apply">決定して適用</button>
+      <form method="dialog">
+        <button class="btn btn-secondary" type="submit">閉じる</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="export-dialog" class="dialog">
+    <h2>書き出し</h2>
+    <p id="export-status" class="muted small">書き出しを開始しています…</p>
+    <div class="export-progress">
+      <progress id="export-progress-bar" max="100" value="0"></progress>
+      <span id="export-progress-text">0%</span>
+    </div>
+    <p id="export-error" class="export-error" hidden></p>
+    <a id="export-download" class="btn btn-primary" hidden>動画を保存</a>
+    <form method="dialog" class="dialog-actions">
+      <button class="btn btn-secondary">閉じる</button>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

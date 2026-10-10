@@ -1,0 +1,28 @@
+{
+  "source_path": "C:/Users/ryo30/nopasodaigaku/EditAI/temp/9836cd30-3307-4946-acbc-a5923ab83768/source.mp4",
+  "options": {
+    "enabled": false,
+    "vad_threshold": 0.5,
+    "min_silence_ms": 500,
+    "padding_ms": 150
+  },
+  "media": {
+    "duration": 39.766,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true
+  },
+  "enabled": false,
+  "original_duration": 39.766,
+  "cut_duration": 39.766,
+  "removed_duration": 0.0,
+  "kept_ranges": [
+    {
+      "source_start": 0.0,
+      "source_end": 39.766,
+      "output_start": 0.0,
+      "output_end": 39.766
+    }
+  ]
+}

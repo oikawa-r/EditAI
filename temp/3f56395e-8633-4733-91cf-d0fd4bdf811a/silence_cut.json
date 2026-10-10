@@ -1,0 +1,112 @@
+{
+  "source_path": "C:/Users/ryo30/nopasodaigaku/EditAI/temp/3f56395e-8633-4733-91cf-d0fd4bdf811a/source.mkv",
+  "options": {
+    "enabled": true,
+    "vad_threshold": 0.5,
+    "min_silence_ms": 500,
+    "padding_ms": 150
+  },
+  "media": {
+    "duration": 64.3,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true
+  },
+  "enabled": true,
+  "original_duration": 64.3,
+  "cut_duration": 40.433,
+  "removed_duration": 23.867,
+  "kept_ranges": [
+    {
+      "source_start": 1.533,
+      "source_end": 3.2,
+      "output_start": 0.0,
+      "output_end": 1.667
+    },
+    {
+      "source_start": 4.133,
+      "source_end": 9.467,
+      "output_start": 1.667,
+      "output_end": 7.0
+    },
+    {
+      "source_start": 12.0,
+      "source_end": 13.1,
+      "output_start": 7.0,
+      "output_end": 8.1
+    },
+    {
+      "source_start": 13.467,
+      "source_end": 15.133,
+      "output_start": 8.1,
+      "output_end": 9.767
+    },
+    {
+      "source_start": 16.033,
+      "source_end": 18.667,
+      "output_start": 9.767,
+      "output_end": 12.4
+    },
+    {
+      "source_start": 20.067,
+      "source_end": 26.067,
+      "output_start": 12.4,
+      "output_end": 18.4
+    },
+    {
+      "source_start": 26.8,
+      "source_end": 28.667,
+      "output_start": 18.4,
+      "output_end": 20.267
+    },
+    {
+      "source_start": 30.5,
+      "source_end": 31.333,
+      "output_start": 20.267,
+      "output_end": 21.1
+    },
+    {
+      "source_start": 31.9,
+      "source_end": 35.3,
+      "output_start": 21.1,
+      "output_end": 24.5
+    },
+    {
+      "source_start": 35.867,
+      "source_end": 37.733,
+      "output_start": 24.5,
+      "output_end": 26.367
+    },
+    {
+      "source_start": 39.333,
+      "source_end": 40.633,
+      "output_start": 26.367,
+      "output_end": 27.667
+    },
+    {
+      "source_start": 46.8,
+      "source_end": 52.467,
+      "output_start": 27.667,
+      "output_end": 33.333
+    },
+    {
+      "source_start": 54.7,
+      "source_end": 57.567,
+      "output_start": 33.333,
+      "output_end": 36.2
+    },
+    {
+      "source_start": 58.867,
+      "source_end": 59.5,
+      "output_start": 36.2,
+      "output_end": 36.833
+    },
+    {
+      "source_start": 59.867,
+      "source_end": 63.467,
+      "output_start": 36.833,
+      "output_end": 40.433
+    }
+  ]
+}

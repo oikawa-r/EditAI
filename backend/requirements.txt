@@ -1,0 +1,19 @@
+# EditAI バックエンドの依存ライブラリ
+# インストール：python -m pip install -r backend/requirements.txt
+# FFmpeg と Ollama は pip では入らないため、別にインストールする
+
+# API サーバー
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+# POST /projects の方式B（multipart/form-data でのアップロード）に必要
+python-multipart>=0.0.9
+
+# 音声データの受け渡し
+numpy>=1.26,<3.0
+
+# ステップ1の Silero VAD（ONNX 版が同梱）と、ステップ2の文字起こし
+faster-whisper>=1.1,<2.0
+
+# ステップ3：Ollama のローカル API（http://127.0.0.1:11434）を呼ぶ
+httpx>=0.27,<1.0

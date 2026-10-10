@@ -1,0 +1,32 @@
+{
+  "model": "small",
+  "language": "ja",
+  "device": "cpu",
+  "duration": 16.467,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": "だから行ってみよう",
+      "confidence": 0.033
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 2.0,
+      "end": 14.66,
+      "text": "パーム パ投ちょっと",
+      "confidence": 0.033
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 14.66,
+      "end": 16.467,
+      "text": "アリオケ",
+      "confidence": 0.033
+    }
+  ]
+}

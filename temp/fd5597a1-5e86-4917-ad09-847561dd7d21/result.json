@@ -1,0 +1,360 @@
+{
+  "project_id": "fd5597a1-5e86-4917-ad09-847561dd7d21",
+  "source": {
+    "file_name": "source.mkv",
+    "duration": 148.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0
+  },
+  "silence_cut": {
+    "enabled": true,
+    "original_duration": 148.0,
+    "cut_duration": 97.733,
+    "removed_duration": 50.267,
+    "kept_ranges": [
+      {
+        "source_start": 1.5,
+        "source_end": 2.467,
+        "output_start": 0.0,
+        "output_end": 0.967
+      },
+      {
+        "source_start": 5.6,
+        "source_end": 7.667,
+        "output_start": 0.967,
+        "output_end": 3.033
+      },
+      {
+        "source_start": 11.233,
+        "source_end": 15.8,
+        "output_start": 3.033,
+        "output_end": 7.6
+      },
+      {
+        "source_start": 16.067,
+        "source_end": 17.6,
+        "output_start": 7.6,
+        "output_end": 9.133
+      },
+      {
+        "source_start": 18.667,
+        "source_end": 22.033,
+        "output_start": 9.133,
+        "output_end": 12.5
+      },
+      {
+        "source_start": 22.567,
+        "source_end": 26.0,
+        "output_start": 12.5,
+        "output_end": 15.933
+      },
+      {
+        "source_start": 27.0,
+        "source_end": 29.0,
+        "output_start": 15.933,
+        "output_end": 17.933
+      },
+      {
+        "source_start": 29.967,
+        "source_end": 34.533,
+        "output_start": 17.933,
+        "output_end": 22.5
+      },
+      {
+        "source_start": 35.6,
+        "source_end": 37.133,
+        "output_start": 22.5,
+        "output_end": 24.033
+      },
+      {
+        "source_start": 37.467,
+        "source_end": 39.933,
+        "output_start": 24.033,
+        "output_end": 26.5
+      },
+      {
+        "source_start": 41.067,
+        "source_end": 42.2,
+        "output_start": 26.5,
+        "output_end": 27.633
+      },
+      {
+        "source_start": 44.767,
+        "source_end": 47.133,
+        "output_start": 27.633,
+        "output_end": 30.0
+      },
+      {
+        "source_start": 49.7,
+        "source_end": 55.067,
+        "output_start": 30.0,
+        "output_end": 35.367
+      },
+      {
+        "source_start": 56.467,
+        "source_end": 59.033,
+        "output_start": 35.367,
+        "output_end": 37.933
+      },
+      {
+        "source_start": 59.567,
+        "source_end": 60.7,
+        "output_start": 37.933,
+        "output_end": 39.067
+      },
+      {
+        "source_start": 61.5,
+        "source_end": 63.5,
+        "output_start": 39.067,
+        "output_end": 41.067
+      },
+      {
+        "source_start": 67.167,
+        "source_end": 68.3,
+        "output_start": 41.067,
+        "output_end": 42.2
+      },
+      {
+        "source_start": 69.033,
+        "source_end": 70.5,
+        "output_start": 42.2,
+        "output_end": 43.667
+      },
+      {
+        "source_start": 70.733,
+        "source_end": 72.533,
+        "output_start": 43.667,
+        "output_end": 45.467
+      },
+      {
+        "source_start": 72.767,
+        "source_end": 73.867,
+        "output_start": 45.467,
+        "output_end": 46.567
+      },
+      {
+        "source_start": 74.7,
+        "source_end": 84.867,
+        "output_start": 46.567,
+        "output_end": 56.733
+      },
+      {
+        "source_start": 85.167,
+        "source_end": 86.667,
+        "output_start": 56.733,
+        "output_end": 58.233
+      },
+      {
+        "source_start": 87.833,
+        "source_end": 89.033,
+        "output_start": 58.233,
+        "output_end": 59.433
+      },
+      {
+        "source_start": 94.7,
+        "source_end": 101.167,
+        "output_start": 59.433,
+        "output_end": 65.9
+      },
+      {
+        "source_start": 102.967,
+        "source_end": 103.733,
+        "output_start": 65.9,
+        "output_end": 66.667
+      },
+      {
+        "source_start": 105.167,
+        "source_end": 106.133,
+        "output_start": 66.667,
+        "output_end": 67.633
+      },
+      {
+        "source_start": 111.9,
+        "source_end": 121.4,
+        "output_start": 67.633,
+        "output_end": 77.133
+      },
+      {
+        "source_start": 122.333,
+        "source_end": 131.033,
+        "output_start": 77.133,
+        "output_end": 85.833
+      },
+      {
+        "source_start": 131.5,
+        "source_end": 132.433,
+        "output_start": 85.833,
+        "output_end": 86.767
+      },
+      {
+        "source_start": 134.667,
+        "source_end": 136.9,
+        "output_start": 86.767,
+        "output_end": 89.0
+      },
+      {
+        "source_start": 137.533,
+        "source_end": 141.267,
+        "output_start": 89.0,
+        "output_end": 92.733
+      },
+      {
+        "source_start": 141.7,
+        "source_end": 145.1,
+        "output_start": 92.733,
+        "output_end": 96.133
+      },
+      {
+        "source_start": 146.4,
+        "source_end": 148.0,
+        "output_start": 96.133,
+        "output_end": 97.733
+      }
+    ]
+  },
+  "preview_url": "/api/v1/projects/fd5597a1-5e86-4917-ad09-847561dd7d21/media/preview",
+  "llm": {
+    "status": "disabled",
+    "model": "qwen2.5:7b",
+    "failed_segments": 10,
+    "message": null
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 9.12,
+      "importance": 2,
+      "variants": {
+        "original": "今の状況としては一旦動画の間を取り省くという作用までことができました",
+        "summary": "今の状況としては一旦動画の間を取り省くという作用までことができました",
+        "impact": "今の状況としては一旦動画の間を取り省くという作用までことができました"
+      },
+      "confidence": 0.777
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 9.12,
+      "end": 17.2,
+      "importance": 2,
+      "variants": {
+        "original": "多分テンプできると思うんだけどこんな感じでできようになってそして多方のUIも完成してて",
+        "summary": "多分テンプできると思うんだけどこんな感じでできようになってそして多方のUIも完成してて",
+        "impact": "多分テンプできると思うんだけどこんな感じでできようになってそして多方のUIも完成してて"
+      },
+      "confidence": 0.777
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 17.2,
+      "end": 25.16,
+      "importance": 2,
+      "variants": {
+        "original": "これかなこのUIも完成しててテロップを変えたり重要度で変えたりできようになって",
+        "summary": "これかなこのUIも完成しててテロップを変えたり重要度で変えたりできようになって",
+        "impact": "これかなこのUIも完成しててテロップを変えたり重要度で変えたりできようになって"
+      },
+      "confidence": 0.777
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 25.16,
+      "end": 33.32,
+      "importance": 2,
+      "variants": {
+        "original": "シークバーも一応動くとでテロップを選べるようになっている 細かい部分はまでできたいんだけどシス",
+        "summary": "シークバーも一応動くとでテロップを選べるようになっている 細かい部分はまでできたいんだけどシス",
+        "impact": "シークバーも一応動くとでテロップを選べるようになっている 細かい部分はまでできたいんだけどシス"
+      },
+      "confidence": 0.784
+    },
+    {
+      "id": "seg_0005",
+      "index": 4,
+      "start": 33.32,
+      "end": 41.12,
+      "importance": 2,
+      "variants": {
+        "original": "UIはまずできてシステムの方が今ムーンまでできた感じです ここまでに",
+        "summary": "UIはまずできてシステムの方が今ムーンまでできた感じです ここまでに",
+        "impact": "UIはまずできてシステムの方が今ムーンまでできた感じです ここまでに"
+      },
+      "confidence": 0.784
+    },
+    {
+      "id": "seg_0006",
+      "index": 5,
+      "start": 41.12,
+      "end": 53.68,
+      "importance": 2,
+      "variants": {
+        "original": "これカーサーをカーサーってもかかんないけどのプロの方をちょっと学割とか 聞かせたかったんだけど今やってないっぽくてすぐにはできないので",
+        "summary": "これカーサーをカーサーってもかかんないけどのプロの方をちょっと学割とか 聞かせたかったんだけど今やってないっぽくてすぐにはできないので",
+        "impact": "これカーサーをカーサーってもかかんないけどのプロの方をちょっと学割とか 聞かせたかったんだけど今やってないっぽくてすぐにはできないので"
+      },
+      "confidence": 0.784
+    },
+    {
+      "id": "seg_0007",
+      "index": 6,
+      "start": 53.68,
+      "end": 67.66,
+      "importance": 2,
+      "variants": {
+        "original": "なんかイベントとか出たらできるっぽいけど来なかったので これ表示をフローを月3000のやつを契約して今作ってもらって結構いい感じにできています",
+        "summary": "なんかイベントとか出たらできるっぽいけど来なかったので これ表示をフローを月3000のやつを契約して今作ってもらって結構いい感じにできています",
+        "impact": "なんかイベントとか出たらできるっぽいけど来なかったので これ表示をフローを月3000のやつを契約して今作ってもらって結構いい感じにできています"
+      },
+      "confidence": 0.745
+    },
+    {
+      "id": "seg_0008",
+      "index": 7,
+      "start": 67.66,
+      "end": 77.18,
+      "importance": 2,
+      "variants": {
+        "original": "でパイソンとかもなんかインストールなんかノートパソコンデスクストップの方してないけどノートパソコンの方してなくてなんか少し時間かかったりしたけどまあ何とか",
+        "summary": "でパイソンとかもなんかインストールなんかノートパソコンデスクストップの方してないけどノートパソコンの方してなくてなんか少し時間かかったりしたけどまあ何とか",
+        "impact": "でパイソンとかもなんかインストールなんかノートパソコンデスクストップの方してないけどノートパソコンの方してなくてなんか少し時間かかったりしたけどまあ何とか"
+      },
+      "confidence": 0.745
+    },
+    {
+      "id": "seg_0009",
+      "index": 8,
+      "start": 77.18,
+      "end": 88.94,
+      "importance": 2,
+      "variants": {
+        "original": "できたっていう感じでワンドライブに最初保存しててそれがなんかちょっと あんまうまく生きにくい今後怪しそうだったので連携がフォルダイジッタリするときにカーサー",
+        "summary": "できたっていう感じでワンドライブに最初保存しててそれがなんかちょっと あんまうまく生きにくい今後怪しそうだったので連携がフォルダイジッタリするときにカーサー",
+        "impact": "できたっていう感じでワンドライブに最初保存しててそれがなんかちょっと あんまうまく生きにくい今後怪しそうだったので連携がフォルダイジッタリするときにカーサー"
+      },
+      "confidence": 0.77
+    },
+    {
+      "id": "seg_0010",
+      "index": 9,
+      "start": 88.94,
+      "end": 97.667,
+      "importance": 2,
+      "variants": {
+        "original": "カーサーのフォルダイジッタリするときに連携がしそうだったので一旦シードライブ普通に ssd の方に移しましたという感じです",
+        "summary": "カーサーのフォルダイジッタリするときに連携がしそうだったので一旦シードライブ普通に ssd の方に移しましたという感じです",
+        "impact": "カーサーのフォルダイジッタリするときに連携がしそうだったので一旦シードライブ普通に ssd の方に移しましたという感じです"
+      },
+      "confidence": 0.77
+    }
+  ],
+  "importance_summary": {
+    "1": 0,
+    "2": 10,
+    "3": 0
+  }
+}

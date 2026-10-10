@@ -1,0 +1,91 @@
+{
+  "project_id": "c9a09c83-27d3-44bf-bbaf-a75c8d43fa2b",
+  "source": {
+    "file_name": "source.mp4",
+    "duration": 39.766,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0
+  },
+  "silence_cut": {
+    "enabled": true,
+    "original_duration": 39.766,
+    "cut_duration": 21.8,
+    "removed_duration": 17.966,
+    "kept_ranges": [
+      {
+        "source_start": 2.2,
+        "source_end": 3.1,
+        "output_start": 0.0,
+        "output_end": 0.9
+      },
+      {
+        "source_start": 3.967,
+        "source_end": 4.767,
+        "output_start": 0.9,
+        "output_end": 1.7
+      },
+      {
+        "source_start": 5.533,
+        "source_end": 7.233,
+        "output_start": 1.7,
+        "output_end": 3.4
+      },
+      {
+        "source_start": 8.3,
+        "source_end": 9.433,
+        "output_start": 3.4,
+        "output_end": 4.533
+      },
+      {
+        "source_start": 9.833,
+        "source_end": 11.9,
+        "output_start": 4.533,
+        "output_end": 6.6
+      },
+      {
+        "source_start": 13.867,
+        "source_end": 14.767,
+        "output_start": 6.6,
+        "output_end": 7.5
+      },
+      {
+        "source_start": 15.133,
+        "source_end": 16.0,
+        "output_start": 7.5,
+        "output_end": 8.367
+      },
+      {
+        "source_start": 17.7,
+        "source_end": 18.9,
+        "output_start": 8.367,
+        "output_end": 9.567
+      },
+      {
+        "source_start": 19.867,
+        "source_end": 21.067,
+        "output_start": 9.567,
+        "output_end": 10.767
+      },
+      {
+        "source_start": 24.3,
+        "source_end": 35.333,
+        "output_start": 10.767,
+        "output_end": 21.8
+      }
+    ]
+  },
+  "preview_url": "/api/v1/projects/c9a09c83-27d3-44bf-bbaf-a75c8d43fa2b/media/preview",
+  "llm": {
+    "status": "disabled",
+    "model": "qwen2.5:7b",
+    "failed_segments": 0,
+    "message": "文字起こしを行っていないため、テロップはありません。"
+  },
+  "segments": [],
+  "importance_summary": {
+    "1": 0,
+    "2": 0,
+    "3": 0
+  }
+}

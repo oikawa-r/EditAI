@@ -1,0 +1,90 @@
+{
+  "project_id": "136e6a7a-358b-4f03-b14d-52b1d7c301e9",
+  "source": {
+    "file_name": "source.mp4",
+    "duration": 39.766,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0
+  },
+  "silence_cut": {
+    "enabled": false,
+    "original_duration": 39.766,
+    "cut_duration": 39.766,
+    "removed_duration": 0.0,
+    "kept_ranges": [
+      {
+        "source_start": 0.0,
+        "source_end": 39.766,
+        "output_start": 0.0,
+        "output_end": 39.766
+      }
+    ]
+  },
+  "preview_url": "/api/v1/projects/136e6a7a-358b-4f03-b14d-52b1d7c301e9/media/preview",
+  "llm": {
+    "status": "ok",
+    "model": "qwen2.5:7b",
+    "failed_segments": 0,
+    "message": null
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 20.0,
+      "importance": 2,
+      "variants": {
+        "original": "こんにちは、今回は音声のトリエがどうなるかを調べたいと思います。",
+        "summary": "今回は音声のトリエを調査",
+        "impact": "音声トリエ、調査開始"
+      },
+      "confidence": 0.617
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 20.0,
+      "end": 22.52,
+      "importance": 1,
+      "variants": {
+        "original": "ということで",
+        "summary": "で",
+        "impact": "で"
+      },
+      "confidence": 0.789
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 24.32,
+      "end": 32.36,
+      "importance": 2,
+      "variants": {
+        "original": "これで音声がどんな感じに途切れているのかを今検証しているために色々な喋り方で喋っています",
+        "summary": "音声の途切れを検証するため Various speaking styles",
+        "impact": "Various speaking styles"
+      },
+      "confidence": 0.789
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 32.36,
+      "end": 36.84,
+      "importance": 2,
+      "variants": {
+        "original": "今はとにかく早く喋っています",
+        "summary": "今は早く話しています",
+        "impact": "早口、今"
+      },
+      "confidence": 0.789
+    }
+  ],
+  "importance_summary": {
+    "1": 1,
+    "2": 3,
+    "3": 0
+  }
+}

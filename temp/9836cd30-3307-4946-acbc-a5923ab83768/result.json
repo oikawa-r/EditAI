@@ -1,0 +1,90 @@
+{
+  "project_id": "9836cd30-3307-4946-acbc-a5923ab83768",
+  "source": {
+    "file_name": "source.mp4",
+    "duration": 39.766,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0
+  },
+  "silence_cut": {
+    "enabled": false,
+    "original_duration": 39.766,
+    "cut_duration": 39.766,
+    "removed_duration": 0.0,
+    "kept_ranges": [
+      {
+        "source_start": 0.0,
+        "source_end": 39.766,
+        "output_start": 0.0,
+        "output_end": 39.766
+      }
+    ]
+  },
+  "preview_url": "/api/v1/projects/9836cd30-3307-4946-acbc-a5923ab83768/media/preview",
+  "llm": {
+    "status": "failed",
+    "model": "qwen2.5:7b",
+    "failed_segments": 4,
+    "message": "Ollama に接続できなくなりました（http://127.0.0.1:11434）。"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 20.0,
+      "importance": 2,
+      "variants": {
+        "original": "こんにちは。今回は音声のトリエがどうなるかを調べたいと思います。",
+        "summary": "こんにちは。今回は音声のトリエがどうなるかを調べたいと思います。",
+        "impact": "こんにちは。今回は音声のトリエがどうなるかを調べたいと思います。"
+      },
+      "confidence": 0.638
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 20.0,
+      "end": 22.52,
+      "importance": 2,
+      "variants": {
+        "original": "ということで",
+        "summary": "ということで",
+        "impact": "ということで"
+      },
+      "confidence": 0.794
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 24.28,
+      "end": 32.36,
+      "importance": 2,
+      "variants": {
+        "original": "これで音声がどんな感じに途切れているのかを今検証しているために色々な喋り方で喋っています",
+        "summary": "これで音声がどんな感じに途切れているのかを今検証しているために色々な喋り方で喋っています",
+        "impact": "これで音声がどんな感じに途切れているのかを今検証しているために色々な喋り方で喋っています"
+      },
+      "confidence": 0.794
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 32.36,
+      "end": 36.84,
+      "importance": 2,
+      "variants": {
+        "original": "今はとにかく早く喋っています",
+        "summary": "今はとにかく早く喋っています",
+        "impact": "今はとにかく早く喋っています"
+      },
+      "confidence": 0.794
+    }
+  ],
+  "importance_summary": {
+    "1": 0,
+    "2": 4,
+    "3": 0
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source_path": "C:/Users/ryo30/nopasodaigaku/EditAI/temp/3263ec5c-2824-4589-9ca4-d974fd9fcc67/source.mkv",
+  "options": {
+    "enabled": true,
+    "vad_threshold": 0.5,
+    "min_silence_ms": 500,
+    "padding_ms": 150
+  },
+  "media": {
+    "duration": 43.233,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true
+  },
+  "enabled": true,
+  "original_duration": 43.233,
+  "cut_duration": 31.633,
+  "removed_duration": 11.6,
+  "kept_ranges": [
+    {
+      "source_start": 0.633,
+      "source_end": 1.767,
+      "output_start": 0.0,
+      "output_end": 1.133
+    },
+    {
+      "source_start": 3.267,
+      "source_end": 6.933,
+      "output_start": 1.133,
+      "output_end": 4.8
+    },
+    {
+      "source_start": 7.9,
+      "source_end": 8.767,
+      "output_start": 4.8,
+      "output_end": 5.667
+    },
+    {
+      "source_start": 9.433,
+      "source_end": 22.033,
+      "output_start": 5.667,
+      "output_end": 18.267
+    },
+    {
+      "source_start": 23.133,
+      "source_end": 24.067,
+      "output_start": 18.267,
+      "output_end": 19.2
+    },
+    {
+      "source_start": 24.933,
+      "source_end": 26.067,
+      "output_start": 19.2,
+      "output_end": 20.333
+    },
+    {
+      "source_start": 27.533,
+      "source_end": 28.133,
+      "output_start": 20.333,
+      "output_end": 20.933
+    },
+    {
+      "source_start": 30.233,
+      "source_end": 32.567,
+      "output_start": 20.933,
+      "output_end": 23.267
+    },
+    {
+      "source_start": 32.833,
+      "source_end": 36.633,
+      "output_start": 23.267,
+      "output_end": 27.067
+    },
+    {
+      "source_start": 36.933,
+      "source_end": 38.033,
+      "output_start": 27.067,
+      "output_end": 28.167
+    },
+    {
+      "source_start": 39.1,
+      "source_end": 42.567,
+      "output_start": 28.167,
+      "output_end": 31.633
+    }
+  ]
+}

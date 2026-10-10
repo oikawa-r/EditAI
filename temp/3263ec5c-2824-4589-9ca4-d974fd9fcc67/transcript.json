@@ -1,0 +1,88 @@
+{
+  "model": "small",
+  "language": "ja",
+  "device": "cpu",
+  "duration": 31.635,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "text": "そして一旦無音カットができたところで",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 5.0,
+      "end": 9.5,
+      "text": "細かいシステムまで先に無音カットの部分で作るか",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 9.5,
+      "end": 12.0,
+      "text": "それとも全体を先に作っちゃう",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 12.0,
+      "end": 15.0,
+      "text": "大きな方となる部分を作り切っちゃうかで",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0005",
+      "index": 4,
+      "start": 15.0,
+      "end": 18.5,
+      "text": "質問して大きな方を先に作ったほうが",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0006",
+      "index": 5,
+      "start": 18.5,
+      "end": 20.5,
+      "text": "一旦アプリができると",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0007",
+      "index": 6,
+      "start": 20.5,
+      "end": 23.5,
+      "text": "そしてデータ構造も確定してからUI作れる",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0008",
+      "index": 7,
+      "start": 23.5,
+      "end": 27.0,
+      "text": "システム的に先に大きな方を作ったほうが",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0009",
+      "index": 8,
+      "start": 27.0,
+      "end": 29.5,
+      "text": "後々いじりやすいっていう点で",
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0010",
+      "index": 9,
+      "start": 29.5,
+      "end": 31.635,
+      "text": "先に大きな方を作っていきます",
+      "confidence": 0.6
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "source_path": "C:/Users/ryo30/nopasodaigaku/EditAI/temp/5c76bf71-8cc2-4cff-bfc9-1098e0b6536a/source.mkv",
+  "options": {
+    "enabled": true,
+    "vad_threshold": 0.5,
+    "min_silence_ms": 500,
+    "padding_ms": 150
+  },
+  "media": {
+    "duration": 148.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "has_audio": true
+  },
+  "enabled": true,
+  "original_duration": 148.0,
+  "cut_duration": 97.733,
+  "removed_duration": 50.267,
+  "kept_ranges": [
+    {
+      "source_start": 1.5,
+      "source_end": 2.467,
+      "output_start": 0.0,
+      "output_end": 0.967
+    },
+    {
+      "source_start": 5.6,
+      "source_end": 7.667,
+      "output_start": 0.967,
+      "output_end": 3.033
+    },
+    {
+      "source_start": 11.233,
+      "source_end": 15.8,
+      "output_start": 3.033,
+      "output_end": 7.6
+    },
+    {
+      "source_start": 16.067,
+      "source_end": 17.6,
+      "output_start": 7.6,
+      "output_end": 9.133
+    },
+    {
+      "source_start": 18.667,
+      "source_end": 22.033,
+      "output_start": 9.133,
+      "output_end": 12.5
+    },
+    {
+      "source_start": 22.567,
+      "source_end": 26.0,
+      "output_start": 12.5,
+      "output_end": 15.933
+    },
+    {
+      "source_start": 27.0,
+      "source_end": 29.0,
+      "output_start": 15.933,
+      "output_end": 17.933
+    },
+    {
+      "source_start": 29.967,
+      "source_end": 34.533,
+      "output_start": 17.933,
+      "output_end": 22.5
+    },
+    {
+      "source_start": 35.6,
+      "source_end": 37.133,
+      "output_start": 22.5,
+      "output_end": 24.033
+    },
+    {
+      "source_start": 37.467,
+      "source_end": 39.933,
+      "output_start": 24.033,
+      "output_end": 26.5
+    },
+    {
+      "source_start": 41.067,
+      "source_end": 42.2,
+      "output_start": 26.5,
+      "output_end": 27.633
+    },
+    {
+      "source_start": 44.767,
+      "source_end": 47.133,
+      "output_start": 27.633,
+      "output_end": 30.0
+    },
+    {
+      "source_start": 49.7,
+      "source_end": 55.067,
+      "output_start": 30.0,
+      "output_end": 35.367
+    },
+    {
+      "source_start": 56.467,
+      "source_end": 59.033,
+      "output_start": 35.367,
+      "output_end": 37.933
+    },
+    {
+      "source_start": 59.567,
+      "source_end": 60.7,
+      "output_start": 37.933,
+      "output_end": 39.067
+    },
+    {
+      "source_start": 61.5,
+      "source_end": 63.5,
+      "output_start": 39.067,
+      "output_end": 41.067
+    },
+    {
+      "source_start": 67.167,
+      "source_end": 68.3,
+      "output_start": 41.067,
+      "output_end": 42.2
+    },
+    {
+      "source_start": 69.033,
+      "source_end": 70.5,
+      "output_start": 42.2,
+      "output_end": 43.667
+    },
+    {
+      "source_start": 70.733,
+      "source_end": 72.533,
+      "output_start": 43.667,
+      "output_end": 45.467
+    },
+    {
+      "source_start": 72.767,
+      "source_end": 73.867,
+      "output_start": 45.467,
+      "output_end": 46.567
+    },
+    {
+      "source_start": 74.7,
+      "source_end": 84.867,
+      "output_start": 46.567,
+      "output_end": 56.733
+    },
+    {
+      "source_start": 85.167,
+      "source_end": 86.667,
+      "output_start": 56.733,
+      "output_end": 58.233
+    },
+    {
+      "source_start": 87.833,
+      "source_end": 89.033,
+      "output_start": 58.233,
+      "output_end": 59.433
+    },
+    {
+      "source_start": 94.7,
+      "source_end": 101.167,
+      "output_start": 59.433,
+      "output_end": 65.9
+    },
+    {
+      "source_start": 102.967,
+      "source_end": 103.733,
+      "output_start": 65.9,
+      "output_end": 66.667
+    },
+    {
+      "source_start": 105.167,
+      "source_end": 106.133,
+      "output_start": 66.667,
+      "output_end": 67.633
+    },
+    {
+      "source_start": 111.9,
+      "source_end": 121.4,
+      "output_start": 67.633,
+      "output_end": 77.133
+    },
+    {
+      "source_start": 122.333,
+      "source_end": 131.033,
+      "output_start": 77.133,
+      "output_end": 85.833
+    },
+    {
+      "source_start": 131.5,
+      "source_end": 132.433,
+      "output_start": 85.833,
+      "output_end": 86.767
+    },
+    {
+      "source_start": 134.667,
+      "source_end": 136.9,
+      "output_start": 86.767,
+      "output_end": 89.0
+    },
+    {
+      "source_start": 137.533,
+      "source_end": 141.267,
+      "output_start": 89.0,
+      "output_end": 92.733
+    },
+    {
+      "source_start": 141.7,
+      "source_end": 145.1,
+      "output_start": 92.733,
+      "output_end": 96.133
+    },
+    {
+      "source_start": 146.4,
+      "source_end": 148.0,
+      "output_start": 96.133,
+      "output_end": 97.733
+    }
+  ]
+}

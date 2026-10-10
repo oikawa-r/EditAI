@@ -1,0 +1,40 @@
+{
+  "model": "small",
+  "language": "ja",
+  "device": "cpu",
+  "duration": 39.7,
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 20.0,
+      "text": "こんにちは、今回は音声のトリエがどうなるかを調べたいと思います。",
+      "confidence": 0.617
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 20.0,
+      "end": 22.52,
+      "text": "ということで",
+      "confidence": 0.789
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 24.32,
+      "end": 32.36,
+      "text": "これで音声がどんな感じに途切れているのかを今検証しているために色々な喋り方で喋っています",
+      "confidence": 0.789
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 32.36,
+      "end": 36.84,
+      "text": "今はとにかく早く喋っています",
+      "confidence": 0.789
+    }
+  ]
+}

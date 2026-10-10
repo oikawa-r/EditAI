@@ -1,0 +1,228 @@
+{
+  "project_id": "3263ec5c-2824-4589-9ca4-d974fd9fcc67",
+  "source": {
+    "file_name": "source.mkv",
+    "duration": 43.233,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0
+  },
+  "silence_cut": {
+    "enabled": true,
+    "original_duration": 43.233,
+    "cut_duration": 31.633,
+    "removed_duration": 11.6,
+    "kept_ranges": [
+      {
+        "source_start": 0.633,
+        "source_end": 1.767,
+        "output_start": 0.0,
+        "output_end": 1.133
+      },
+      {
+        "source_start": 3.267,
+        "source_end": 6.933,
+        "output_start": 1.133,
+        "output_end": 4.8
+      },
+      {
+        "source_start": 7.9,
+        "source_end": 8.767,
+        "output_start": 4.8,
+        "output_end": 5.667
+      },
+      {
+        "source_start": 9.433,
+        "source_end": 22.033,
+        "output_start": 5.667,
+        "output_end": 18.267
+      },
+      {
+        "source_start": 23.133,
+        "source_end": 24.067,
+        "output_start": 18.267,
+        "output_end": 19.2
+      },
+      {
+        "source_start": 24.933,
+        "source_end": 26.067,
+        "output_start": 19.2,
+        "output_end": 20.333
+      },
+      {
+        "source_start": 27.533,
+        "source_end": 28.133,
+        "output_start": 20.333,
+        "output_end": 20.933
+      },
+      {
+        "source_start": 30.233,
+        "source_end": 32.567,
+        "output_start": 20.933,
+        "output_end": 23.267
+      },
+      {
+        "source_start": 32.833,
+        "source_end": 36.633,
+        "output_start": 23.267,
+        "output_end": 27.067
+      },
+      {
+        "source_start": 36.933,
+        "source_end": 38.033,
+        "output_start": 27.067,
+        "output_end": 28.167
+      },
+      {
+        "source_start": 39.1,
+        "source_end": 42.567,
+        "output_start": 28.167,
+        "output_end": 31.633
+      }
+    ]
+  },
+  "preview_url": "/api/v1/projects/3263ec5c-2824-4589-9ca4-d974fd9fcc67/media/preview",
+  "llm": {
+    "status": "ok",
+    "model": "qwen2.5:7b",
+    "failed_segments": 0,
+    "message": null
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "index": 0,
+      "start": 0.0,
+      "end": 5.0,
+      "importance": 2,
+      "variants": {
+        "original": "そして一旦無音カットができたところで",
+        "summary": "無音カットの後にシステム作る",
+        "impact": "無音カット→システム"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0002",
+      "index": 1,
+      "start": 5.0,
+      "end": 9.5,
+      "importance": 2,
+      "variants": {
+        "original": "細かいシステムまで先に無音カットの部分で作るか",
+        "summary": "細かいシステムと全体の作業",
+        "impact": "細かいvs全体"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0003",
+      "index": 2,
+      "start": 9.5,
+      "end": 12.0,
+      "importance": 2,
+      "variants": {
+        "original": "それとも全体を先に作っちゃう",
+        "summary": "全体を先に作るか考える",
+        "impact": "全体作る？"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0004",
+      "index": 3,
+      "start": 12.0,
+      "end": 15.0,
+      "importance": 2,
+      "variants": {
+        "original": "大きな方となる部分を作り切っちゃうかで",
+        "summary": "大きな部分を作り切るか",
+        "impact": "大きな部分？"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0005",
+      "index": 4,
+      "start": 15.0,
+      "end": 18.5,
+      "importance": 2,
+      "variants": {
+        "original": "質問して大きな方を先に作ったほうが",
+        "summary": "大きな方を先に作る",
+        "impact": "大きな方先に"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0006",
+      "index": 5,
+      "start": 18.5,
+      "end": 20.5,
+      "importance": 2,
+      "variants": {
+        "original": "一旦アプリができると",
+        "summary": "アプリができてからUI",
+        "impact": "アプリ→UI"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0007",
+      "index": 6,
+      "start": 20.5,
+      "end": 23.5,
+      "importance": 2,
+      "variants": {
+        "original": "そしてデータ構造も確定してからUI作れる",
+        "summary": "データ構造確定後UI作る",
+        "impact": "データ確定→UI"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0008",
+      "index": 7,
+      "start": 23.5,
+      "end": 27.0,
+      "importance": 2,
+      "variants": {
+        "original": "システム的に先に大きな方を作ったほうが",
+        "summary": "システム的に大きな方先に",
+        "impact": "システム→大きな方"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0009",
+      "index": 8,
+      "start": 27.0,
+      "end": 29.5,
+      "importance": 2,
+      "variants": {
+        "original": "後々いじりやすいっていう点で",
+        "summary": "後々いじりやすい",
+        "impact": "後々いじりやすい"
+      },
+      "confidence": 0.846
+    },
+    {
+      "id": "seg_0010",
+      "index": 9,
+      "start": 29.5,
+      "end": 31.635,
+      "importance": 3,
+      "variants": {
+        "original": "先に大きな方を作っていきます",
+        "summary": "大きな方を先に作る",
+        "impact": "大きな方先に"
+      },
+      "confidence": 0.6
+    }
+  ],
+  "importance_summary": {
+    "1": 0,
+    "2": 9,
+    "3": 1
+  }
+}

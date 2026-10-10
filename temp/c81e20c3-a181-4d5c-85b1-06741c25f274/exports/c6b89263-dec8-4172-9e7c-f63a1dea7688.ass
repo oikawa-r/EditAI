@@ -1,0 +1,18 @@
+﻿[Script Info]
+; EditAI で生成
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans JP,64,&H0089D723,&H0089D723,&H006565A4,&H80000000,-1,0,0,0,100,100,0,0,1,4,2,5,40,40,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:09.60,Default,,0,0,0,,今日は音声の映画を調査します
+Dialogue: 0,0:00:09.60,0:00:18.76,Default,,0,0,0,,ということでこれで音声がどんな感じ\Nに途切れているのかを今検証している\Nために色々なしゃべり方で喋っています
+Dialogue: 0,0:00:18.76,0:00:21.80,Default,,0,0,0,,今はとにかく早く喋っています

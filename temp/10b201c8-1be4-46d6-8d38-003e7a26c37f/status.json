@@ -1,0 +1,48 @@
+{
+  "project_id": "10b201c8-1be4-46d6-8d38-003e7a26c37f",
+  "status": "failed",
+  "progress": 20.0,
+  "current_step": null,
+  "steps": [
+    {
+      "name": "silence_cutting",
+      "status": "completed",
+      "progress": 100.0
+    },
+    {
+      "name": "transcribing",
+      "status": "failed",
+      "progress": 0.0
+    },
+    {
+      "name": "llm_processing",
+      "status": "pending",
+      "progress": 0.0
+    }
+  ],
+  "eta_seconds": null,
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "サーバーが停止したため中断されました。",
+    "details": {}
+  },
+  "updated_at": "2026-09-30T16:25:05+09:00",
+  "source_path": "C:\\Users\\ryo30\\nopasodaigaku\\EditAI\\temp\\10b201c8-1be4-46d6-8d38-003e7a26c37f\\source.mp4",
+  "options": {
+    "silence": {
+      "enabled": true,
+      "vad_threshold": 0.5,
+      "min_silence_ms": 500,
+      "padding_ms": 150
+    },
+    "transcription": {
+      "model": "large-v3",
+      "language": "ja"
+    },
+    "llm": {
+      "enabled": true,
+      "model": "qwen2.5:7b"
+    }
+  },
+  "created_at": "2026-09-30T16:08:03+09:00"
+}
